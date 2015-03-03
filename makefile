@@ -1,6 +1,6 @@
 include build/init.mk
 
-PROJECTS := blinky test
+PROJECTS := blinky
 
 .PHONY: all clean $(PROJECTS)
 

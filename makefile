@@ -7,6 +7,9 @@ PROJECTS := blinky
 all:
 	@for x in $(PROJECTS); do echo $$x; done
 
+$(PROJECTS)-clean:
+	rm -rf $(OUTPUT_DIR)/$(patsubst %-clean,%, $@)
+
 clean:
 	rm -rf out
 

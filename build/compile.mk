@@ -5,10 +5,19 @@ PROJECT_OUT_ELF := $(PROJECT_BUILD_DIR)/$(PROJECT).elf
 PROJECT_OUT_HEX := $(PROJECT_BUILD_DIR)/$(PROJECT).hex
 
 vpath %.c ./sdk/components/drivers_nrf/hal
+vpath %.c ./sdk/components/libraries/timer
+vpath %.c ./sdk/components/libraries/util
 vpath %.c ./sdk/components/toolchain
 vpath %.s ./sdk/components/toolchain/gcc
+vpath %.c ./sdk/components/softdevice/common/softdevice_handler
+vpath %.c ./sdk/examples/bsp/
+vpath %.c ./sdk/components/ble/common
+vpath %.c ./sdk/components/libraries/button
+vpath %.c ./sdk/components/libraries/fifo
+vpath %.c ./sdk/components/libraries/gpiote
+vpath %.c ./sdk/components/libraries/scheduler
+vpath %.c ./sdk/components/drivers_nrf/uart
 vpath %.c $(PROJECT_SRC_DIR)
-
 
 $(PROJECT): $(PROJECT_BUILD_DIR) $(PROJECT_OUT_BIN)
 	@echo Build Complete!
